@@ -16,7 +16,7 @@ userRoute.get('/', async(req, res) => {
 userRoute.post('/register', async (req, res) => {
     try {
         let { username, email, password } = req.body
-        bcrypt.hash(password, 8, async function (err, hash) {
+        bcrypt.hash(password, 8,  function (err, hash) {
             if (err) {
       res.send({ "msg": "enter correct credentials" })
             } else {
