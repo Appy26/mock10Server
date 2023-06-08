@@ -14,6 +14,6 @@ app.listen(process.env.port, async() => {
       await connection
       console.log("server is running")
   } catch (error) {
-    res.send({msg:"error.message"})
+    res.send({msg:error.message})
   }
 })

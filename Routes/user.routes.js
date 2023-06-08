@@ -9,7 +9,7 @@ userRoute.get('/', async(req, res) => {
        let user = await userModel.find()
        res.send({"msg":user})
    } catch (error) {
-       res.send({ "msg": Error.message })
+       res.send({ "msg": error.message })
    }
 })
 
@@ -27,7 +27,7 @@ userRoute.post('/register', async (req, res) => {
         });
         
     } catch (error) {
-        res.send({ "msg": Error.message})
+        res.send({ "msg": error.message})
     }
 })
 
@@ -48,7 +48,7 @@ userRoute.post('/login', async (req, res) => {
             })
         }
         } catch (error) {
-        res.send({ "msg": Error.message })
+        res.send({ "msg": error.message })
     }
 })
 
