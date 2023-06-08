@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 
-const authenticate = (req, res,next) => {
+const authenticate =async (req, res,next) => {
     let token = req.headers.authorization;
     try {
         jwt.verify(token, 'mock10', function (err, decoded) {
